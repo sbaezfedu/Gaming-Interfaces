@@ -2,5 +2,5 @@
 Juegos realizados por alumnos de "Diseño de interfaces web" de DAW
 
 Top games:
- - [Prueba1](Pedro%20(topos)/pedro_gtarrio_polo_practica4.html)
- - [Prueba2](WorkflowCreateBranch.MD)
+ - [Aplastar topos](Pedro%20(topos)/pedro_gtarrio_polo_practica4.html)
+ - [Tetris](Borja%20(Tetris)/index.html)
