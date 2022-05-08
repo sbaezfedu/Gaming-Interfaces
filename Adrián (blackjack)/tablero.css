@@ -1,0 +1,238 @@
+body{
+	background-color: #808784;
+}
+#div1{
+	position: relative;
+	margin-top: -30px;
+}
+#div2{
+	position: relative;
+}
+#apuestas{	
+	position: absolute;
+	display: inline-block;
+	margin-left: 80px;
+	margin-top: 120px;
+}
+#apuesta{
+	border: 2px solid black;
+	background-color: #FCD689;
+	text-align: center;
+	clear: both;	
+	width: 60px;	
+}
+#zApuesta{
+	height: 80px;
+	width: 100px;
+	background-color: #084F06;	
+	border: 2px solid black;
+	margin-left: -20px;
+}
+#mesaFichas{
+	background: url(imagenes/fichas.jpg) no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover; 
+	height: 80px;
+	width: 100px;
+	display: none;
+}
+#mesa{
+	background: url(imagenes/mesa.png) no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;   
+   background-size: cover;
+   height: 600px;
+   width: 1200px;
+   text-align: center;
+   display: inline-block;	
+   margin-left: 180px;
+   margin-top: 70px;
+}
+
+#fichas{
+	display: inline-block;	
+}
+#fichas>div{
+	border-radius:250px;
+	border: 1px: solid red;
+	height: 30px;
+	width: 30px;
+	margin-left: 15px;
+	display: inline-block;	
+}
+#uno{
+	//background-color: blue;
+	color: orange;	
+}
+#uno>span{
+	margin-left: -3px;	
+}
+
+#dos{
+	//background-color: orange;
+	color: red;
+}
+#dos>span{
+	margin-left: -3px;
+}
+
+#tres{
+	//background-color: red;
+	color: greenyellow;
+}
+#tres>span{
+	margin-left: -3px;
+}
+
+#cuatro{
+	//background-color: greenyellow;
+}
+#cuatro>span{
+	margin-left: -6px;
+}
+
+#cinco{
+	//background-color: black;
+	color: white;
+}
+#cinco>span{
+	margin-left: -7px;
+}
+#miDinero{		
+	margin-left: 15px;
+	display: inline-block;	
+	height: 20px;
+	width: 80px;
+	background-color: #98E0C1;
+	margin-lefT: 100px;
+	border: 2px solid black;
+	text-align: center;
+}
+#repartir, #plantarse{
+		display: none;
+}
+div>span{
+	padding-left: 10px;
+}
+#botones{
+		margin-top: -20px;
+		text-align: center;
+		margin-right: 100px;
+}
+#baraja{
+		background: url(imagenes/Dorso2.png) no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;   	
+		height: 70px;
+		width: 100px;
+		background-color: red;
+		margin-top: 76px;
+		margin-left: 160px;		
+}
+#puntosMaquina{
+	height: 30px;
+	width: 50px;	
+	display: inline-block;
+	margin-top: 65px;
+	margin-left: 40px;
+	padding-left: 450px;
+	margin-right: -400px;
+	float: left;
+	color: white;
+}
+#cartaMaquina{	
+	height: 100px;
+	width: 70px;	
+	margin-top: 80px;
+	margin-left: -570px;
+	display: inline-block;
+	display: none;
+}
+#RepartidacartaMaquina1, #RepartidacartaMaquina2, #RepartidacartaMaquina3, #RepartidacartaMaquina4, #RepartidacartaMaquina5,#RepartidacartaMaquina6,
+#RepartidacartaMaquina7, #RepartidacartaMaquina8, #RepartidacartaMaquina9, #RepartidacartaMaquina10, #RepartidacartaMaquina11{	
+		background: url(imagenes/h.png) no-repeat;
+		-webkit-background-size: contain;
+		-moz-background-size: contain; 
+	height: 100px;
+	width: 70px;	
+	margin-top: 60px;
+	margin-left: -60px;	
+	padding-right: -60px;
+	display: inline-block;
+	visibility: visible;
+	
+}
+
+#puntosJugador{
+	height: 30px;
+	width: 50px;	
+	display: inline-block;		
+	float: left;
+	margin-left: 520px;	
+	margin-right: -500px;
+	color: white;	
+	margin-top: 120px;
+	padding-right: 20px;
+}
+#cartaJugador{	
+	height: 100px;
+	width: 70px;	
+	margin-left: 565px;
+	margin-top: 112px;
+	display: none;
+}
+#RepartidacartaJugador1,#RepartidacartaJugador2,#RepartidacartaJugador3, #RepartidacartaJugador4,#RepartidacartaJugador5,#RepartidacartaJugador6,
+#RepartidacartaJugador7,#RepartidacartaJugador8,#RepartidacartaJugador9,#RepartidacartaJugador10,#RepartidacartaJugador11{ 
+	background: url(imagenes/h.png) no-repeat;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;   
+	height: 100px;
+	width: 70px;
+	display: inline-block;	
+	padding-left: -60px;
+	margin-top: 110px;
+	margin-right: -60px;
+	
+}
+#ver{
+	color: white;
+	border: 2px solid grey;
+	padding: 5px;
+}
+#bIzquierda{
+	margin-right: 30px; 
+	margin-bottom: 10px;
+}
+#bDerecha{
+	margin-left: 30px;
+	margin-bottom: 10px;
+}
+#div3{
+	position: relative;
+	text-align: center;
+	margin-left: 550px;
+}
+#partidasJugadas{
+	position: relative;	
+	background-color: orange;
+	height: 100;
+	width: 460px;
+	font-size: 20px;
+	padding-top: 20px;
+	border: 2px solid black;
+}
+#historial{
+	position: relative;	
+	height: 100;
+	width: 360px;
+	display: none;
+	margin-top: 20px;
+	background-color: #E8BF75;
+	margin-left: 50px;
+}
+img{
+	float: left;
+	margin-top: -20px;	
+	width: 100%;
+	height: 100%;
+}

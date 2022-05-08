@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+	<title>TETRIS SWITCH</title>
+	<link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Play:400,700&display=swap" rel="stylesheet">
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script>
+	<script src="assets/js/Block.js"></script>
+	<script src="assets/js/Tetrimino.js"></script>
+	<script src="assets/js/Board.js"></script>
+	<script src="assets/js/Main.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="panel">
+			<div class="predictor box"></div>
+			<div class="box">
+				<div class="scoreboard">0</div>
+				<div class="levelboard">LEVEL 0</div>
+			</div>
+			<div class="box">
+				<a href="#" class="start">NEW GAME</a>
+				<a href="#" class="pause">PAUSE</a>
+			</div>
+			<div class="buttons box">
+				<a href="#" class="help">HELP</a>
+				<div class="help-content">
+					<p>You will play in two boards and you have two different modes:<br>
+						- <strong>Auto-switch</strong>: Everytime you clear a row the boards switch.<br>
+						- <strong>Manual</strong>: You can switch between boards whenever you want by pressing 'c'.</p>
+					<p>The more lines you make at once, the more points you earn:<br>
+						- <strong>1 line</strong>: 100 points<br>
+						- <strong>2 lines</strong>: 800 points<br>
+						- <strong>3 lines</strong>: 2700 points<br>
+						- <strong>4 lines</strong>: 6400 points<br>
+						Win small extra points by lower a tetrimino by pressing 'space'.</p>
+					<p>In manual mode you can get score multipliers by clearing rows alternatively between boards.</p>
+				</div>
+				<a href="#" class="controls">CONTROLS</a>
+				<div class="controls-content">
+					<p><strong>Left / Right arrows</strong><br>Move blocks left /right</p>
+					<p><strong>Down arrow</strong><br>Move blocks fast down</p>
+					<p><strong>Space</strong><br>Translate blocks to the bottom</p>
+					<p><strong>Up Arrow</strong><br>Rotate blocks</p>
+					<p><strong>C key</strong><br>Switch between boards (only manual mode)</p>
+					<p><strong>Escape</strong><br>Pause the game</p>
+					<p><strong>S key</strong><br>Start a new game</p>
+				</div>
+				<a href="#" class="settings">SETTINGS</a>
+				<div class="settings-content">
+					<div class="auto-switch">
+						<a href="#" class="selected"></a><label>Auto-switch mode</label>
+					</div>
+					<p>Create your custom tetriminos<br>(min 2 blocks)</p>
+				</div>
+			</div>
+		</div>
+		<div class="modal"></div>
+		<div class="alert" style="display: none">
+			<div class="content">
+				<a href="#" class="close"><i class="fa fa-times"></i></a>
+				<p class="text"></p>
+				<button type="button" class="ok">OK</button>
+				<button type="button" class="cancel">CANCEL</button>
+			</div>
+		</div>
+	</div>
+	<div id="controls" style="display: none;">
+		<a href="#" data-action="left"><i class="fa fa-chevron-left"></i></a>
+		<a href="#" data-action="bottom"><i class="fa fa-angle-double-down"></i></a>
+		<a href="#" data-action="right"><i class="fa fa-chevron-right"></i></a>
+		<a href="#" data-action="switch"><i class="fa fa-arrows-h"></i></a>
+		<a href="#" data-action="down"><i class="fa fa-chevron-down"></i></a>
+		<a href="#" data-action="rotate"><i class="fa fa-repeat"></i></a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@font-face {
+    font-family: Copperplate;
+    src: url(../fonts/Copperplate\ Gothic\ Bold\ Regular.ttf);
+}
+*{
+    font-family: Copperplate;
+    text-align: center;
+    vertical-align: middle;
+}
+body{
+    background-color:#48a6e0 ;
+}
+.title-area{
+    height: 50vh;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.quest-r{
+    border: 1px solid #1e1455;
+    border-radius: 1em;
+    font-size: auto;
+    height: auto;
+}
+.quest-r:hover{
+    background-color: orangered;
+}
+.ask-area{height: 40vh; visibility: hidden;}
+marquee{height: 5vh;}
+.selected{
+    background-color: orangered;
+}
+.respuesta-correcta{
+    background-color: green;
+}
+.puntuacion{
+    vertical-align: middle;
+}

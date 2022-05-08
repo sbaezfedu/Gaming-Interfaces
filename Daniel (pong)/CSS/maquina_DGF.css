@@ -1,0 +1,98 @@
+html,
+body {
+    height: 99%;
+}
+
+body {
+    background-image: url(Imagenes/retroFonfo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#arcade {
+    color: white;
+    height: 100%;
+    background-image: url(Imagenes/Pantalla.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+#instCoin {
+    padding: 0;
+    border: none;
+    background: none;
+    grid-area: 5/3/5/5;
+    background-image: url(Imagenes/boton.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#instCoin:hover {
+    cursor: pointer;
+    background-image: url(Imagenes/boton1.jpg);
+}
+
+#instCoin:focus {
+    outline: none;
+}
+
+#music {
+    padding: 0;
+    border: none;
+    background: none;
+    grid-row: 2/4;
+    grid-column: 8/10;
+    background-image: url(Imagenes/cassete.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#music:hover {
+    cursor: pointer;
+    background-image: url(Imagenes/cassete1.png);
+}
+
+#music:focus {
+    outline: none;
+}
+
+#prev {
+    grid-row: 3/4;
+    grid-column: 7/8;
+    justify-self: center;
+    align-self: center;
+}
+
+#prev:hover {
+    cursor: pointer;
+}
+
+#next {
+    grid-row: 3/4;
+    grid-column: 10/11;
+    justify-self: center;
+    align-self: center;
+}
+
+#next:hover {
+    cursor: pointer;
+}
+
+.pantalla {
+    grid-area: 5/5/13/13;
+    text-align: center;
+    background-color: black;
+}
+
+#frm {
+    background-color: black;
+    overflow: hidden;
+}

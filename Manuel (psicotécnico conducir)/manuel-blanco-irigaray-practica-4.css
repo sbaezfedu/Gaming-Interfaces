@@ -1,0 +1,134 @@
+:root {
+  /*--tramo: 100px;*/
+  --calzada: 38px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+/* https://meta.superuser.com/questions/4788/css-for-the-new-kbd-style */
+kbd {
+  -moz-border-radius:3px;
+  -moz-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+  -webkit-border-radius:3px;
+  -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+  background-color:#f7f7f7;
+  border:1px solid #ccc;
+  border-radius:3px;
+  box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+  color:#333;
+  display:inline-block;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:large;
+  line-height:1.4;
+  margin:0 .1em;
+  padding:.1em .6em;
+  text-shadow:0 1px 0 #fff;
+}
+
+header {
+  text-align: center;
+  padding: 3em;
+  border-bottom: 1px solid gray;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+main {
+  padding: 5em;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.prueba {
+  display: flex;
+  position: relative;
+}
+
+.ruta {
+  flex-grow: 1;
+  margin: 0 10%;
+  position: relative;
+}
+
+.camino {
+  position: relative;
+}
+
+.carril {
+  position: relative;
+  background-color: gold;
+  /*height: var(--tramo);*/
+  /*width: var(--calzada);*/
+}
+
+.izda {
+  transform-origin: left bottom;
+  transform: skew(45deg);
+}
+
+.dcha {
+  transform-origin: right bottom;
+  transform: skew(-45deg);
+}
+
+.bola {
+  height: 20px;
+  width: 20px;
+  background-color: darkred;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*top: 0;*/
+  z-index: 1;
+}
+
+.numerito {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  font-size: 100px;
+  transform: translate(-50%, -50%);
+  color: lightyellow;
+}
+
+#progreso, #porcentaje {
+  position: absolute;
+  height: 30px;
+  width: 400px;
+  top: 50%;
+}
+#progreso {
+  left: 0;
+  transform: rotate(-90deg) translate(-50%, 50%);
+  transform-origin: center left;
+  background-color: lightgreen;
+}
+#porcentaje {
+  right: 0;
+  transform: rotate(-90deg) translate(50%, -50%);
+  transform-origin: center right;
+  background-color: azure;
+}
+#progreso > div, #porcentaje > div {
+  background-color: black;
+  opacity: .3;
+  height: 100%;
+}
+#progreso > span, #porcentaje > span {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  font-weight: bold;
+  transform: translateY(-50%);
+}

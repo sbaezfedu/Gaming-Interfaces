@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Machine</title>
+    <link rel="stylesheet" href="CSS/maquina_DGF.css">
+
+    <script src="scripts/musica.js"></script>
+    <script src="scripts/code_konami.js"></script>
+    <script src="scripts/control_teclado.js"></script>
+    <script src="Scripts/recre_DGF.js"></script>
+    <script src="Scripts/pong.js"></script>
+</head>
+
+<body>
+
+    <div id="arcade">
+        <button id="instCoin"></button>
+
+        <div id="prev" onclick="prev()"> &#xab;</div>
+        <button id="music" onclick="music()"></button>
+        <div id="next" onclick="next()"> &#xbb;</div>
+
+        <wc-pantalla class="pantalla"></wc-pantalla>
+
+        <div id=joystick></div>
+        <div id="botones"></div>
+
+    </div>
+    <audio id="audio"></audio>
+
+</body>
+
+
+
+
+</html>

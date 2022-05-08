@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es-Es" xmlns="http://www.w3.org/1999/xhtml">
+	<head>	
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>Proyecto_DAW</title>		
+		<link rel=StyleSheet href="tablero.css" type="text/css" media=screen>	
+		<script type="text/javascript" src="./jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+		<script src="jqueryTablero.js"></script>		
+	</head>
+	<body>
+		<div>
+			<div id="div3">					
+					<h1 id="partidasJugadas">
+						<input id="bIzquierda" type="button" value="<<"/>
+						<b id="ver">Ultimas Partidas</b>
+						<input id="bDerecha" type="button" value=">>"/>
+					</h1>						
+					<div id="historial">
+						Número Partida - <b>Resultado<b>
+					</div>	
+					
+			</div>
+			
+			<div id="div1">
+				<div id="apuestas">
+					<div id="apuesta">0</div>
+					<div id="zApuesta" class="ui-widget-header"><div id="mesaFichas"></div></div>
+				</div>
+				<div id="mesa">
+					<div id="baraja"></div>
+					
+					<div id="maquina">
+						<div id="puntosMaquina"></div>
+						<div id="cartaMaquina"></div>
+						<div id="RepartidacartaMaquina1"></div>
+						<div id="RepartidacartaMaquina2"></div>
+						<div id="RepartidacartaMaquina3"></div>
+						<div id="RepartidacartaMaquina4"></div>
+						<div id="RepartidacartaMaquina5"></div>
+						<div id="RepartidacartaMaquina6"></div>
+						<div id="RepartidacartaMaquina7"></div>
+						<div id="RepartidacartaMaquina8"></div>
+						<div id="RepartidacartaMaquina9"></div>
+						<div id="RepartidacartaMaquina10"></div>
+						<div id="RepartidacartaMaquina11"></div>
+					</div>
+					
+					<div id="jugador">
+						<div id="puntosJugador"></div>
+						<div id="cartaJugador"></div>
+						<div id="RepartidacartaJugador1"></div>
+						<div id="RepartidacartaJugador2"></div>
+						<div id="RepartidacartaJugador3"></div>
+						<div id="RepartidacartaJugador4"></div>
+						<div id="RepartidacartaJugador5"></div>
+						<div id="RepartidacartaJugador6"></div>
+						<div id="RepartidacartaJugador7"></div>
+						<div id="RepartidacartaJugador8"></div>
+						<div id="RepartidacartaJugador9"></div>
+						<div id="RepartidacartaJugador10"></div>
+						<div id="RepartidacartaJugador11"></div>
+					</div>
+				</div>
+			</div>	
+			
+			<div id="div2">
+				<div id="miDinero">20</div>
+				
+				<div id="fichas">				
+					<div id="uno"><span><img src="imagenes/1.png"/></span></div>
+					<div id="dos"><span><img src="imagenes/2.png"/></span></div>
+					<div id="tres"><span><img src="imagenes/3.png"/></span></div>
+					<div id="cuatro"><span><img src="imagenes/4.png"/></span></div>
+					<div id="cinco"><span><img src="imagenes/5.png"/></span></div>
+				</div>
+			
+				<div id="botones">
+					<input id="iniciar" type="button" value="Iniciar"/>
+					<input id="plantarse" type="button" value="Plantarse"/>
+					<input id="repartir" type="button" value="Repartir"/>
+				</div>
+			</div>			
+		</div>
+	</body>
+</html>

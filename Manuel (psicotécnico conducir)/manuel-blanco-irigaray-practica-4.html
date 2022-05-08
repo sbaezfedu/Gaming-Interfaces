@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Psicotécnico</title>
+  <link rel="stylesheet" type="text/css" href="manuel-blanco-irigaray-practica-4.css">
+  <script type="text/javascript" src="jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="manuel-blanco-irigaray-practica-4.js"></script>
+</head>
+<body>
+
+<header id="menu">
+  <h1>Test Psicotécnico</h1>
+  <p>Bienvenido a nuestro test</p>
+  <p>Con él evaluaremos tu respuesta psicomotriz</p>
+
+  <h2>Manual</h2>
+  <p>
+    Manejarás dos pelotas de color rojo, como estas:
+    <span class="bola" style="display: inline-block; transform: initial; position: static;"></span>
+    <span class="bola" style="display: inline-block; transform: initial; position: static;"></span>
+  </p>
+  <p>Debes tratar de mantenerte dentro de las líneas amarillas el mayor tiempo posible</p>
+  <p>Para ello usarás las teclas <kbd>Z</kbd><kbd>X</kbd> (primera bola) y <kbd>N</kbd><kbd>M</kbd> (segunda bola) para moverlas horizontalmente</p>
+
+  <h2>Configuración</h2>
+  <p>Aquí algunas cosas configurables</p>
+
+  <form>
+    <label for="tramos">Tramos</label>
+    <input type="number" name="tramos" id="tramos" min="2" value="20">
+    <br>
+    <label for="carriles">Carriles</label>
+    <input type="number" name="carriles" id="carriles" min="1" value="3">
+    <br>
+    <label for="velocidad">Velocidad</label>
+    <input type="number" name="velocidad" id="velocidad" min="0" value="700" step="100">
+
+    <p>¡Si estás listo, haz click en comenzar!</p>
+    <input type="submit" name="comenzar" id="comenzar" value="Comenzar">
+  </form>
+</header>
+
+<main id="psicotecnico">
+  <div id="progreso">
+    <span>Progreso de la prueba</span>
+  </div>
+  <section class="prueba"></section>
+  <div id="porcentaje">
+    <span>Porcentaje de acierto</span>
+  </div>
+</main>
+
+</body>
+</html>
