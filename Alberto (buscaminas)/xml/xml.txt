@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ranking>
+    <persona>
+        <nickname>berto</nickname>
+        <tiempo>667</tiempo>
+    </persona>
+</ranking>

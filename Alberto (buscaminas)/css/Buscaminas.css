@@ -1,0 +1,167 @@
+ body {
+     background-color: lightblue;
+    
+ }
+
+ #contenedor {
+     margin: 0 auto;
+     width: fit-content;
+     height: auto;
+     border: 2px solid grey;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+ }
+
+ #flexTablero{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 80vh;
+ }
+
+ #tablero,
+ #marcadorDiv {
+     border: 2px solid grey;
+     margin: 4px;
+ }
+
+ #marcadorDiv {
+     display: grid;
+     grid-template-columns: auto auto auto;
+ }
+
+ #marcadorDiv div {
+     margin: 0 auto;
+ }
+
+ h1{
+     align-content: center;
+     text-align: center;
+     font-family: monospace;
+     font-size: 5rem;
+ }
+
+ table,
+ tr,
+ td {
+     padding: 0;
+     margin: 0;
+ }
+
+ .btnsTablero,
+ #btnReinicio {
+     width: 25px;
+     height: 25px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #btnReinicio img {
+     width: 20px;
+     height: 20px;
+ }
+
+ .btnsTablero img {
+     width: 24px;
+     height: 24px;
+     margin-top: 0;
+ }
+
+ img {
+     width: 24px;
+     height: 24px;
+ }
+
+ /*  MENU */
+ #wrapMenu, #wrapRanking, #wrapDificultad, #wrap {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ #flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+ #wrapDificultad, #flexTablero, #flex, #wrapRanking, #botonBack{
+     display: none;
+ }
+
+ .menu a, .menu{
+     text-decoration: none;
+     color: black;
+     font-family: monospace;
+     font-size: 2em;
+     transition: all 600ms;
+ }
+
+ .menu:hover {
+     transform: scale(1.5);
+ }
+
+ .menu a:hover{
+     color:red;
+ }
+
+ /* RANKING */
+
+ #wrapDifRanking, #tablaRanking {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     font-family: monospace;
+ }
+
+ #wrapDifRanking h2 {
+     padding: 10px;
+     font-size: 2.4em;
+     font-weight: bolder;
+     cursor: pointer; 
+ }
+
+
+ #tablaRaking th, #tablaRaking td {
+    width: 140px;
+    text-align: center;
+    font-size: 1.5em;
+ }
+
+ #botonBack img{
+     width: 50px;
+     height: auto;
+ }
+
+ #tutorial{
+     display: none;
+ }
+
+ /* BARRA PROGRESO */
+
+ #barra{
+     width: 0px;
+     background-color: blue;
+     color: blue;
+ }
+
+ #porcentaje{
+     font-size: 40px;
+ }
+
+ #barraProgreso{
+     width: 80%;
+     height: 20px;
+     background-color: #ccc;
+     visibility: hidden;
+ }
+

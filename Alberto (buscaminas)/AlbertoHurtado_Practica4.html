@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Buscaminas.css">
+</head>
+
+<body>
+
+
+    <div id="botonBack"><img onclick="menuPrincipal()" src="img/flechaAtras.png"></div>
+
+
+    <div id="wrap">
+        <h1>BUSCAMINAS</h1>
+        <div id="wrapMenu">
+            <h2 class="menu" id="menu1"><a onclick="menuDificultad()" href="#">Iniciar juego</a></h2>
+            <h2 class="menu" id="menu2"><a href="#">Ranking</a></h2>
+            <h2 class="menu" id="menu3"><a href="#">Tutorial</a></h2>
+        </div>
+        <div id="wrapDificultad">
+            <h2 class="menu" id="menuFacil"><a onclick="cargar('facil')" href="#">Fácil</a></h2>
+            <h2 class="menu" id="menuMedio"><a onclick="cargar('medio')" href="#">Medio</a></h2>
+            <h2 class="menu" id="menuDificil"><a onclick="cargar('dificil')" href="#">Difícil</a></h2>
+        </div>
+    </div>
+
+    <div id="flex">
+        <div id="porcentaje">0</div>
+        <div id="barraProgreso">
+            
+            <div id="barra">0</div>
+        </div>
+    </div>
+
+    <div id="flexTablero">
+        <div id="contenedor">
+            <div id="marcadorDiv">
+                <div id="minas">000</div>
+                <div><button id="btnReinicio"><img src="img/smiley.png" alt=""></button></div>
+                <div id="cronometro">00:00</div>
+            </div>
+            <div id="tablero"></div>
+        </div>
+    </div>
+
+    <div id="wrapRanking">
+        <h1>RANKING</h1>
+        <div id="wrapDifRanking">
+            <h2 onclick="mostrarRanking('facil')">Fácil</h2>
+            <h2 onclick="mostrarRanking('medio')">Medio</h2>
+            <h2 onclick="mostrarRanking('dificil')">Difícil</h2>
+        </div>
+        <div id="wrapTablaRanking">
+            <table id="tablaRaking">
+                <tr>
+                    <th>Nickname</th>
+                    <th>Tiempo</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div id="tutorial">
+        <h1>TUTORIAL</h1>
+        <p>
+            El juego consiste en despejar todas las casillas de una pantalla que no oculten una mina.
+
+            Algunas casillas tienen un número, el cual indica la cantidad de minas que hay en las casillas circundantes.
+            Así, si una casilla tiene el número 3, significa que de las ocho casillas que hay alrededor (si no es en una
+            esquina o borde) hay 3 con minas y 5 sin minas. Si se descubre una casilla sin número indica que ninguna de
+            las casillas vecinas tiene mina y éstas se descubren automáticamente.
+
+            Si se descubre una casilla con una mina se pierde la partida.
+
+            Se puede poner una marca en las casillas que el jugador piensa que hay minas para ayudar a descubrir las que
+            están cerca.
+        </p>
+        <p>
+            El juego también posee un sistema de récords para cada uno de los 4 niveles en el que se indica el menor
+            tiempo en terminar el juego. Los niveles son (para las nuevas versiones):
+        <ul>
+            <li>Nivel principiante: 8 × 8 casillas y 10 minas.</li>
+            <li>Nivel intermedio: 16 × 16 casillas y 40 minas.</li>
+            <li>Nivel experto: 16 × 30 casillas y 99 minas.</li>
+        </ul>
+        </p>
+    </div>
+
+    <script src="js/Buscaminas.js"></script>
+
+</body>
+
+</html>

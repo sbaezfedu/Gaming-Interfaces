@@ -1,0 +1,152 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="styles/title.css" type="text/css">
+    <link rel="stylesheet" href="styles/history.css" type="text/css">
+
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+
+<!--    Icono del Ninja de la pestaña del navegador-->
+    <link rel="icon" type="image/x-icon" href="/img/ninja.ico">
+
+</head>
+<body>
+
+<!--Menu de inicio-->
+<div id="menuPrincipal">
+
+    <h1><strong class="parpadea">Ninja Warrior</strong></h1>
+
+
+    <h7>
+        <div>
+            <span id="movimiento"> Pulsa cualquier tecla </span>
+        </div>
+    </h7>
+
+    <button data-modal-target="#help" class="btn-help">?</button>
+    <button id="history-btn" class="btn btn-history"><i class="fa-solid fa-user-ninja"></i></button>
+
+<!--    Menu desplegable que se muestra al darle a las ayudas-->
+    <div class="modal " id="help">
+        <div class="modal-header">
+            <div class="title">Controls</div>
+            <button data-close-button class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+
+            <div class="card">
+                <img alt="Player 1" src="img/wasd.png">
+                <div class="container-card">
+                    <p>Player 1</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/arrows.png">
+                <div class="container-card">
+                    <p>Player 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="" id="overlay"></div>
+
+</div>
+
+<!--Panel que "narra" la historia-->
+<div id="containerHistory">
+
+    <p id="title"> Ninja Warriors</p>
+
+
+    <div id="texto">
+
+        <span class="word" id="word"></span>
+
+    </div>
+
+
+</div>
+
+
+<!--Contenedor principal-->
+<div id="containerGame">
+
+    <div id="playerWins">
+
+        <div class="card">
+            Player 1
+            <div class="container-card">
+                <p>Victories <span id="p1Wins"></span></p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="enemyWins">
+
+        <div class="card">
+            Player 2
+            <div class="container-card">
+                <p>Victories <span id="p2Wins"></span></p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Contenedor de Canvas-->
+    <div id="divCanvaContainer">
+
+        <!-- Contenedor de barras de vida y contador -->
+        <div id="divContador-BarraVida">
+
+            <!-- Barra de vida del jugador 1 -->
+            <div id="barraVidaJugador1">
+                <div class="fondoBarraVida"></div>
+                <div id="playerHealth"></div>
+            </div>
+
+            <!-- Contador -->
+            <div id="timer"></div>
+
+            <!--  Barra de vida del jugador 2 -->
+            <div id="barraVidaJugador2">
+                <div class="fondoBarraVida"></div>
+                <div id="enemyHealth"></div>
+            </div>
+        </div>
+
+        <div id="displayText">
+            Draw!
+        </div>
+        <canvas></canvas>
+
+    </div>
+
+    <button id="reiniciar">Reiniciar</button>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+></script>
+<script src="js/utils.js"></script>
+<script src="js/classes.js"></script>
+<script src="index.js"></script>
+<script src="js/banner.js"></script>
+<script src="js/history.js"></script>
+
+
+</body>

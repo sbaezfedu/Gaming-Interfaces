@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Howler -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"
+        integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ=="
+        crossorigin="anonymous"></script>
+    <title>SpaceShip Xd</title>
+</head>
+
+<body>
+    <div class="menu" style="text-align: center;">
+        <header><a class="titulo">SPACE<br>INVADERINO</a></header>
+        <a class="eightbit-btn" id="facil">FACIL</a>
+        <hr />
+        <a class="eightbit-btn eightbit-btn--proceed" id="medio">MEDIO</a>
+        <hr />
+        <a class="eightbit-btn eightbit-btn--reset" id="dificil">DIFICIL</a>
+        <hr />
+        <div class="popUp"><a class="eightbit-btn eightbit-btn--proceed" id="open">CONTROLES</a> <a
+                class="eightbit-btn eightbit-btn--proceed" id="score">PUNTUACION</a></div>
+        <hr />
+        <div class="barra" style="display: none;">
+            <div id="myProgress">
+                <div id="myBar">0%</div>
+            </div>
+        </div>
+    </div>
+    <div id="modal_container" class="modal-container">
+        <div class="modal">
+            <img src="assets/spaceBar.png" class="space">
+            <img src="assets/flechas.png" class="flechas">
+            <button id="close">Cerrar</button>
+        </div>
+    </div>
+    <div id="modal_container2" class="modal-container">
+        <div class="modal">
+            <img src="assets/copa.png" class="imagenCopa">
+            <div class="leaderboard">
+                <ol>
+                    <li>
+                        <mark class="n1"></mark>
+                        <small class="primero"></small>
+                    </li>
+                    <li>
+                        <mark class="n2"></mark>
+                        <small class="segundo"></small>
+                    </li>
+                    <li>
+                        <mark class="n3"></mark>
+                        <small class="tercero"></small>
+                    </li>
+                </ol>
+            </div>
+            <button id="close2">Cerrar</button>
+        </div>
+    </div>
+    <script src="popUp.js"></script>
+    <div class="contenedor" style="display: none;">
+        <header><a class="titulo">SPACE<br>INVADERINO</a></header>
+        <div class="contenido-juego">
+            <div class="juego"></div>
+            <div class="lose">
+                <h1>😈GAME OVER😈</h1>
+                <h2>¡ESPABILA BOBI!</h2>
+                <button class="btn-restart" id="difilcultad">Seleccione dificultad</button>
+            </div>
+            <div class="win">
+                <h1>🔥NIVEL SUPERADO🔥</h1>
+                <h2>¿FACIL?</h2>
+                <button class="btn-restart" id="siguiente">Siguiente nivel</button>
+            </div>
+            <div class="winFinal">
+                <h1>👾JUEGO COMPLETADO👾</h1>
+                <h2>🥳FACILITO🥳</h2>
+                <a style="font-size: 30px;">INICIALES(3):<input type="text" name="name" id="name"></a>
+                <br>
+                <button class="btn-restart" id="final" style="display: none;">Registrar</button>
+            </div>
+        </div>
+        <script src="game.js"></script>
+        <div class="puntuacion">PUNTUACION:&nbsp;<a class="score"></a></div>
+        <div class="barra2" style="display: none;">
+            <div id="myProgress2">
+                <div id="myBar2">0%</div>
+            </div>
+        </div>
+    </div>
+    <div id="musicaFondo">
+        <span id="home" style="display: none;"><a class="eightbit-btn eightbit-btn--proceed">⌂</a></span>
+        <span id="play"><a class="eightbit-btn">▷</a></span>
+        <span id="stop"><a class="eightbit-btn eightbit-btn--reset">◻</a></span>
+    </div>
+    <script src="progresbar.js"></script>
+    <script src="music.js"></script>
+</body>
+
+</html>

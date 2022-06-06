@@ -1,0 +1,59 @@
+#containerHistory{
+    display: none;
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
+}
+
+.word {
+    font-size: 24px;
+    color: black;
+    line-height: 1.4em;
+    height: 1.4em;
+    display: none;
+    vertical-align: middle;
+    position: relative;
+    margin-left: 10rem;
+}
+
+.word:before {
+    content: '';
+    background-color: black;
+    width: 1px;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 7px;
+}
+
+#texto{
+    text-align: center;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    visibility: hidden;
+    position: absolute;
+    top: 5%;
+    left: 38%;
+    font-size: 32px;
+    color: yellow;
+    animation: latidos 2s infinite;
+    transform-origin: center;
+}
+
+@keyframes latidos {
+    from { transform: none; }
+    50% { transform: scale(1.1); }
+    to { transform: none; }
+}
+
+

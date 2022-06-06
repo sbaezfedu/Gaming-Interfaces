@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="juego.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mystery+Quest">
+</head>
+<body>
+
+    <!--Pantalla de Dificultad-->
+    <div id="dificultad">
+        <div>La dificultad afectara a la velociadd de los coches y troncos</div>
+        <button class="botones-dificultad" onclick="facil()">Facil</button>
+        <button class="botones-dificultad" onclick="normal()">Normal</button>
+        <button class="botones-dificultad" onclick="dificil()">Dificil</button>
+    </div>
+    <!-------------------------------->
+   
+    <!--Pantalla de Game over-->
+    <div id="gameOver">
+        <h1 id="tituloOver">GAME OVER</h1>
+        <div>Froggy ha muerto ,no logro regresar a su casa.<br>Su familia lo recordara con tristeza,un dia fue a por moscas para su hermana enferma y desparecio.<br>
+            Froggy cruzo la autopista sin mirar y murio :(.No seas como froggy cruza mirando a los lados por favor
+            <br><br><br>
+            ¿Que estas esperando un boton de volver a intentar?Los botones de volver a intentar son para los gandores,no para perdedores como <strong>TU</strong> .<br>Refresca la pagina perdedor
+            <br>Por tu culpa la hermana enferma de froggy esta muerta.<br>Es penoso perder en este juego pero te imaginas perder dos veces.<br><br>
+
+            Toma tu boton de volver a intentar perdedor<br>
+            <button class="boton" onclick="intentar()">Volver a intentar</button>
+            <div id="derrota"></div>
+            
+        </div>
+    </div>
+    <!-------------------------------->
+
+    <!--Pantalla de infromacion----------------------->
+    <div id="informacion">
+        <div>
+            <h1>Informacion</h1>
+            <div>En este juego seguiremos los pasos de nuestro amigo froggy , el cual se ha escapado de sus secuestradores y debe hacer el camino a casa sorteando
+                un numero de obstaculos.¿Conseguira froggy volver con su familia ?
+            </div>
+            <br> <br><br>
+            <div>Froggy se mueve con las flechas del teclado <div id="teclas"></div></div>
+            <br><br> <br>
+            <div>Recuerda debes esquivar los coches y intentar no caer en el agua,porque froggy no sabe nadar :(<div id="coche"></div></div>
+            <br> <br><br>
+            <div>froggy puede resistir tres golpes al cuarto golpe saldra la pantalla de GameOver</div>
+        </div>
+        <br><br>
+        <button  class="boton" onclick="volver()">Volver</button>
+    </div>
+    <!----------------------------------------------------------->
+    <!--Pantalla principal-->
+    <div id="start">
+        <h1 id="titulo">Frogger</h1>
+        <div>
+        <button class="boton" onclick="iniciar()" >Iniciar Juego</button>
+        <button class="boton" onclick="informacion()">Informacion</button>
+        <button class="boton" onclick="ajustes()">Ajustes</button>
+        </div>
+        <br>
+        <br>   
+    </div>
+        <!--Pantalla eleccion de nombre-->
+    <div id="nombre">
+         
+        <label class="texto" >Introduzca un nombre</label>
+        <input type="text" id="nombreJugador" required>
+        <button type="button"  class="boton" onclick="empezar()">Comenzar</button>
+         <!--Ventana de alerta-->
+         <div class="alert">
+            <div>Por favor pon un nombre</div>
+            <br>
+            <button onclick="cerrarAlert()" class="boton-alert">Aceptar</button>
+        </div>
+        <!-------------------------------------->
+       <div id="barra">  <div id="myBar"></div> </div>
+    </div>
+    <!------------------------------>
+      <!--Pantalla de victoria-->
+      <div id="victoria">
+       <div id="imagenFinal"></div>
+       <div id="ranaFinal"></div>
+       <div id="textoFinal"><span id="textoFinal2"></span></div>
+    </div>
+    <!------------------------------>
+    <!--Pantalla de juego-->
+    <div id="juego">
+                  <!--Ventana popUp Puntuacion-->
+    <diV id="puntuacion">
+        <div id="Header">
+            <h1>Puntuacion</h1>
+            <button  onclick="animacionFinal()" class="boton-cerrar">X</button>
+        </div>
+       
+        <div id="primero"></div>
+        <div id="segundo"></div>
+        <div id="tercero"></div>
+        <div id="cuarto"></div>
+        <div id="quinto"></div>
+
+        <br><br>
+        <div id="marcaPersonal"></div>
+    </diV>
+    <!---------------------------->
+    <div id="pause">
+        <div><button  onclick="cerrarPause()" class="boton">Reanudar</button></div>
+    </div>
+
+    <div id="marcador">
+        <h1>Tiempo</h1><div id="tiempo">0</div>
+        <h1 id="vidas">vidas:
+            
+            <div class="vida" id="uno"></div>
+            <div class="vida" id="dos"></div>
+            <div class="vida" id="tres"></div>
+        </h2>
+    </div>
+    <div class="grid">
+
+        <div class="final" ></div>
+        <div class="tronco agua"></div>
+        <div class=" agua"></div>
+        <div class="agua"></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div class="coche "></div>
+        <div></div>
+        <div class="coche"></div>
+        <div></div>
+
+        
+        <div class="final"></div>
+        <div class="tronco agua"></div>
+        <div class="nenufar agua"></div>
+        <div class="tronco agua"></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div ></div>
+        <div class="coche2"></div>
+        <div ></div>
+        <div></div>
+
+        
+        <div class="final"></div>
+        <div class=" agua"></div>
+        <div class="agua"></div>
+        <div class="tronco agua"></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+
+
+        
+        <div class="final"></div>
+        <div class="agua"></div>
+        <div class="agua"></div>
+        <div class="agua"></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div class="coche"></div>
+        <div></div>
+
+        
+        <div class="final"></div>
+        <div class=" tronco agua"></div>
+        <div class="  agua"></div>
+        <div class="agua"></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div></div>
+        <div ></div>
+
+        
+        <div class="familia final"></div>
+        <div class="tronco agua"></div>
+        <div class="nenufar agua"></div>
+        <div class="tronco agua"></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div class="cocheAzul"></div>
+        <div class="coche2"></div>
+        <div></div>
+        <div class="rana" id="rana"></div>
+
+        
+        <div class="final"></div>
+        <div class="tronco agua"></div>
+        <div class="agua"></div>
+        <div class="agua"></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+
+        
+        <div class="final"></div>
+        <div class="  agua"></div>
+        <div class="agua"></div>
+        <div class="agua"></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div class=" f8"></div>
+        <div></div>
+        <div class="coche"></div>
+        <div></div>
+
+        
+        <div class="final"></div>
+        <div class="tronco agua"></div>
+        <div class=" agua" ></div>
+        <div class="tronco agua"></div>
+        <div></div>
+        <div ></div>
+        <div></div>
+        <div class="cocheAzul"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        
+        <div class="final"></div>
+        <div class="tronco agua"></div>
+        <div class="nenufar agua"></div>
+        <div class=" tronco agua"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div ></div>
+        <div class="camion2"></div>
+        <div></div>
+        <div></div>
+        
+        <div class="final"></div>
+        <div class="agua"></div>
+        <div class="agua" ></div>
+        <div class="tronco agua"></div>
+        <div></div>
+        <div ></div>
+        <div class="coche2" ></div>
+        <div ></div>
+        <div class="camion1"></div>
+        <div></div>
+        <div></div>
+
+        
+
+
+    </div>
+    <div id="marcador">
+    </div>
+</div>
+<!------------------------------------------------->
+    <script src="funcionalidad.js"></script>
+    <script src="animaciones.js"></script>
+
+</body>
+</html>
