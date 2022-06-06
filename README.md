@@ -16,7 +16,6 @@ Top games:
  - [Psicotécnico de conducir](Manuel%20(psicotécnico%20conducir)/manuel-blanco-irigaray-practica-4.html){:target="_blank"}
  - [¿Quién quiere ser millonario?](Gero%20(Quién%20quiere%20ser%20millonario)/index.html){:target="_blank"}
  - [Snake - Train wreek](Alejandro%20(snake%20-%20train%20wreck)/Alejandro_Rodriguez_Sanchez_Practica4.html){:target="_blank"}
- - [Space invaders](Alejandro%20(Space%20Invaders)/index.html){:target="_blank"}
- - [Super Mario bala](Guillermo%20(Super%20Mario%20bala)/Guillermo_blanco_andres_Práctica4.html){:target="_blank"}
+ - [Space invaders](Alejandro%20(Space%20Invaders)/index.html){:target="_blank"} 
  - [Tetris](Borja%20(Tetris)/index.html){:target="_blank"}
  
