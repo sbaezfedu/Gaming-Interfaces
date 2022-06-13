@@ -1,5 +1,6 @@
 /* VARIABLE QUE GUARDA LA TIRADA */
 var tirada;
+var contad = 0;
 /* FUNCIÓN QUE SE EJECUTA AL TIRAR LOS DADOS */
 function tirar(){
     sonido.play();
@@ -59,7 +60,7 @@ function moverFicha(tirada, posAntes, ficha, posicion, casillaInicial, casilla){
 
             setTimeout(function(){
                 resolve();
-            }, (max*4));
+            }, (max*velocidad));
         });
     }
     /* SE CALCULA LA POSICIÓN INICIAL DE LA FICHA Y LA FINAL Y EN BASE A ESTO SE GENERAN LAS ANIMACIONES CORRESPONDIENTES */

@@ -134,7 +134,7 @@ class Carousel extends HTMLElement {
         /* SE AÑADE EL CSS */
         const estilo = document.createElement("link");
         estilo.rel="stylesheet";
-        estilo.href = "./css/Ekaterina_Stroevitch_Krasnova_Práctica4-style-instrucciones.css";
+        estilo.href = "./css/style-instrucciones.css";
         shadowRoot.appendChild(estilo);
         shadowRoot.appendChild(fontAwesome);
         shadowRoot.appendChild(contenInterno);
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const empezar = document.getElementById("empezar");
     empezar.addEventListener("click", seleccionar);
     function seleccionar(){
-        window.location.href = "./Ekaterina_Stroevitch_Krasnova_Práctica4-inicio.html";
+        window.location.href = "./inicio.html";
     }
 
 });

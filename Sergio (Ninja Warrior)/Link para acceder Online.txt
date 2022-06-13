@@ -1,4 +1,4 @@
-Simplemente al pegar está ruta en el navegador, te llevara a un bucket de AWS creado por mi el cual te puede mostrar páginas estaticas.
+Simplemente al pegar está URL en el navegador, te llevara a un bucket de AWS donde también esta almacenado.
 
 http://ninja-warrior.s3-website-eu-west-1.amazonaws.com/
 

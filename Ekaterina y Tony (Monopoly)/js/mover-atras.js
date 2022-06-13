@@ -2,7 +2,7 @@
 var atras = false;
 
 /* ANIMACIONES MOVIMIENTO FICHAS HACIA ATRÁS */
-function ekaterina_Stroevitch_Krasnova_PrCtica4MoverAtras(tirada, posAntes, ficha, posicion, casillaInicial, casilla){
+function moverAtras(tirada, posAntes, ficha, posicion, casillaInicial, casilla){
     atras = true;
     /* SE CREA LA PROMESA QUE SERÁ LANZADA CADA VEZ QUE SE MUEVA LA FICHA */
     var promesa = function(ficha, distancia, direccion)

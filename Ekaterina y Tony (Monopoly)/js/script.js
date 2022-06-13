@@ -119,8 +119,8 @@ async function turnoJugador(){
             const fondo = document.getElementById("fondo");
             fondo.classList.add("oculto");
         }
-
         await asyncMensajeAzkaban();
+        turnoComprar();
     }
     /* FUNCIÓN QUE PIDE CONFIRMACIÓN DE PAGO PARA SALIR DE AZKABAN Y EN CASO AFIRMATIVO SACA AL JUGADOR */
     async function pagarAzkaban() {
@@ -134,6 +134,7 @@ async function turnoJugador(){
             } catch (error) {
                 const fondo = document.getElementById("fondo1");
                 fondo.classList.add("oculto");
+                turnoComprar();
             }
         }
 
@@ -160,6 +161,21 @@ async function turnoJugador(){
             }
             asyncSalir();
         }
+    }
+}
+function turnoComprar(){
+    /* ACCIONES PERMITIDAS EN EL TURNO */
+    /* COMPRAR CASAS U HOTELES */
+    if(turno.gruposCasillas.length>0 && turno.deuda===0){
+        turno.gruposCasillas.forEach(grupo=>{
+            grupo.casillas.forEach(cas=>{
+                const casillaHtml = document.getElementById(cas.id);
+                if(cas.casas === turno.calcularMenorCasas(grupo) && turno.dinero>=cas.precioCasa&& cas.hoteles===0){
+                    casillaHtml.classList.add("pinchable");
+                    casillaHtml.addEventListener("click", habilitarCompCasas);
+                }
+            })
+        })
     }
 }
 /* VARIABLE EN LA QUE SE GUARDA EL OBJETO CASILLA EN EL QUE SE DESEA REALIZAR ACCIONES */
@@ -201,9 +217,10 @@ async function jugadorJuego(inicial, final){
             const fondo = document.getElementById("fondo");
             fondo.classList.add("oculto");
             const ficha = document.getElementById("ficha" + turno.id);
-            asyncMovimientoAzkaban(ficha, casiFinal);
+            await asyncMovimientoAzkaban(ficha, casiFinal);
         }
         await asyncIrAzkaban();
+        turnoComprar();
         /* EN EL RESTO DE LOS CASOS */
     }else{
         /* SI LA CASILLA ES COMPRABLE */
@@ -249,19 +266,7 @@ async function jugadorJuego(inicial, final){
             await randomTarjeta("hechizos");
         }
         if(!finPartida){
-            /* ACCIONES PERMITIDAS EN EL TURNO */
-            /* COMPRAR CASAS U HOTELES */
-            if(turno.gruposCasillas.length>0 && turno.deuda===0){
-                turno.gruposCasillas.forEach(grupo=>{
-                    grupo.casillas.forEach(cas=>{
-                        const casillaHtml = document.getElementById(cas.id);
-                        if(cas.casas === turno.calcularMenorCasas(grupo) && turno.dinero>=cas.precioCasa && cas.hoteles===0){
-                            casillaHtml.classList.add("pinchable");
-                            casillaHtml.addEventListener("click", habilitarCompCasas);
-                        }
-                    })
-                })
-            }
+            turnoComprar();
         }
     }
 }
@@ -277,7 +282,7 @@ var promesaAzkaban = function(ficha, casilla)
 
         setTimeout(function(){
             resolve();
-        }, (distancia*4));
+        }, (distancia*velocidad));
     });
 }
 /* FUNCIÓN QUE ESPERA A QUE SE MUEVA LA FICHA PARA DESPUÉS HABILITAR EL BOTÓN DE FINALIZAR EL TURNO */
@@ -484,12 +489,12 @@ async function finalPartida(tipoFinal){
             const btn = document.getElementById("btn-volver");
             btn.addEventListener("click", volverSeleccion);
             function volverSeleccion(){
-                window.location.href = "./Ekaterina_Stroevitch_Krasnova_Práctica4-inicio.html";
+                window.location.href = "./inicio.html";
             }
             const btn1 = document.getElementById("btn-volver1");
             btn1.addEventListener("click", volverInicio);
             function volverInicio(){
-                window.location.href = "./Ekaterina_Stroevitch_Krasnova_Práctica4-juego.html";
+                window.location.href = "./juego.html";
             }
             /* FUNCIÓN PARA ORDENAR SEGÚN LA POSICIÓN */
             function comparaPosicion(a, b) {
@@ -669,6 +674,7 @@ async function getModo(){
         document.getElementById("fondo2").classList.remove("oculto");
 
     });
+    /* Cambia el audio a ./audio/fuegos.mp3 */
     musicaFondo = new audio("./audio/hedwigs-theme.mp3");
     function seleccionar() {
         return new Promise((resolve) => {

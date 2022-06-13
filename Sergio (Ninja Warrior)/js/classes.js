@@ -1,3 +1,7 @@
+// Modificar tasa de refresco
+const frmaeHold = 5 //Default: 5
+
+
 //Constructor general, para poder cargar las imagenes y poder manipular el frame que se muestra
 class Sprite {
     constructor({
@@ -16,7 +20,7 @@ class Sprite {
         this.framesMax = framesMax
         this.framesCurrent = 0
         this.framesElapsed = 0
-        this.framesHold = 5
+        this.framesHold = frmaeHold
         this.offset = offset
     }
 
@@ -67,7 +71,7 @@ class Fighter extends Sprite {
                     scale = 1,
                     framesMax = 1,
                     offset = {x: 0, y: 0},
-                    framesHold = 10,
+                    framesHold = frmaeHold,
                     sprites,
                     attackBox = {offset: {}, width: undefined, height: undefined}
                 }) {
@@ -116,6 +120,7 @@ class Fighter extends Sprite {
         this.attackBox.position.y = this.position.y + this.attackBox.offset.y
 
         // Al desomitir esto, puedes mostrar el area de hitbox
+
         // ctx.fillRect(
         //     this.attackBox.position.x,
         //     this.attackBox.position.y,

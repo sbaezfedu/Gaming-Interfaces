@@ -25,41 +25,17 @@ function determineWinner({player, enemy, timerId}) {
 
         aumentarP1()
 
-
     } else if (player.health < enemy.health) {
         document.querySelector('#displayText').innerHTML = 'Player 2 Wins'
         document.querySelector('#reiniciar').style.visibility = "visible"
         aumentarP2()
-
-
     }
 }
 
 
-//A traves de la promesa genera un numero aleatorio el cual se va a ser el contador del tiempo que hay para derrotarse, en el caso que el numero sea mayor a 60s, pasara automaticamente a ser 60
+//Determina el tiempo de juego
 
-let timer
-
-let timerPromesa = new Promise((resolve, reject) => {
-
-
-    let num = Math.floor(Math.random() * 62);
-
-    if (num < 60) {
-        resolve(num);
-    } else {
-        reject();
-    }
-});
-
-
-timerPromesa.then(
-    (resolve) => timer = resolve
-).catch(
-    (reject) => timer = 60
-);
-
-
+let timer = 60 //Default 60
 let timerId
 
 //Funcion la cual va bajando el contador y aplica el numero en la interfaz del juego, va bajando cada segundo

@@ -11,7 +11,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height)
 
 
 //Gravedad
-const gravity = 0.8
+const gravity = 0.8 //Default 0.8
 
 
 //Controlar el tiempo para poder parar a los jugadores si el tiempo se ha acabado
@@ -22,7 +22,7 @@ let timerDown = false
 const background = new Sprite({
     position: {
         x: 0, y: 0
-    }, imageSrc: './img/background.png'
+    }, imageSrc: './img/background.png' //Default: './img/background.png'
 })
 
 //Implementacion de la tienda y su imagen
