@@ -8,7 +8,7 @@ Top games:
  - [Buscaminas](Alberto%20(buscaminas)/AlbertoHurtado_Practica4.html){:target="_blank"}
  - [Dodge Ball](Mauricio%20(Dodge%20Ball)/Mauricio_Rodriguez_Saglimbeni_html.html){:target="_blank"}
  - [Frogger](Felipe%20(Frogger)/juego.html){:target="_blank"}
- - [Monopoly](Ekaterina%20y%20Tony%20(Monopoly)/Ekaterina_Stroevitch_Krasnova_Práctica4.html){:target="_blank"}
+ - [Monopoly](Ekaterina%20y%20Tony%20(Monopoly)/index.html){:target="_blank"}
  - [Neon Runner](Alfredo%20(Neon%20Runner)/html/APG_P4_index.html){:target="_blank"}
  - [Ninja Warrior](Sergio%20(Ninja%20Warrior)/index.html){:target="_blank"}
  - [Phaser frog (subido a plataforma de juegos)](https://gamejolt.com/games/phaser_frog_experimental/717998){:target="_blank"}
